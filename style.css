@@ -104,11 +104,15 @@ input:checked + label {
   background: var(--gray-200);
 }
 
-label:hover {
-  background: var(--orange);
-  color: var(--white);
-  cursor: pointer;
+@media (any-hover: hover) {
+
+  label:hover {
+    background: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+  }
 }
+
 
 label span {
   line-height: 1;
