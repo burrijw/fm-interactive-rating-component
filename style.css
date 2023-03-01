@@ -1,0 +1,128 @@
+/* Vars */
+:root {
+  --orange: #ea7c35;
+  --white: #ffffff;
+  --gray-100: #979eab;
+  --gray-200: #7e8796;
+  --gray-800: #272d36;
+  --gray-900: #121417;
+
+  --ff-regular: 400 1rem "Overpass", Verdana, Geneva, Tahoma, sans-serif;
+  --ff-bold: 700 1rem "Overpass", Verdana, Geneva, Tahoma, sans-serif;
+
+  --rounded-full: 999px;
+  --rounded: 15px;
+}
+
+/* Utils */
+.visually-hidden:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.stack > * + * {
+  display: flex;
+  flex-direction: column;
+  margin-block-start: var(--space, 1rem);
+}
+
+body {
+  background: var(--gray-900);
+  font: var(--ff-regular);
+}
+
+main {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding-block: 1.5rem 2rem;
+  padding-inline: 1.5rem;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  color: var(--gray-200);
+  border-radius: var(--rounded);
+}
+
+.img-star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  background: var(--gray-800);
+  border-radius: var(--rounded-full);
+}
+
+.img-star img {
+  width: 0.875rem;
+}
+
+.form__title {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.form__description {
+  --space: 0.625rem;
+  max-width: 32ch;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.625rem;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--rounded-full);
+  background: var(--gray-800);
+}
+
+input:checked + label {
+  color: var(--white);
+  background: var(--gray-200);
+}
+
+label:hover {
+  background: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+
+label span {
+  line-height: 1;
+  translate: 0px 1px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 2rem;
+  border-radius: var(--rounded-full);
+  border: none;
+  min-height: 2.8125rem;
+  background: var(--orange);
+  color: var(--white);
+}
